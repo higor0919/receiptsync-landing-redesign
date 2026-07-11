@@ -158,7 +158,7 @@
   .workflow-step { display: flex; align-items: center; justify-content: center; gap: 9px; color: #35314f; font-size: 13px; }
   .workflow-step span { width: 31px; height: 31px; display: grid; place-items: center; border: 1px solid rgb(255 43 155 / .25); border-radius: 50%; color: var(--pink); background: #fff4fa; font-size: 10px; font-weight: 800; }
   .workflow-step svg { color: var(--violet); }
-  .workflow-stage > img { display: block; width: 100%; margin: 18px auto 14px; border: 1px solid #e4e0ee; border-radius: 18px; box-shadow: 0 18px 38px rgb(35 24 82 / .12); }
+  .workflow-stage > img { display: block; width: 100%; margin: 12px auto 0; border-radius: 20px; }
   .workflow-captions { gap: 18px; text-align: center; color: var(--muted-text); font-size: 13px; }
   .proof-bar { max-width: 1000px; margin: 28px auto 0; display: grid; grid-template-columns: repeat(3,1fr); padding: 18px 8px; border: 1px solid #ebe8f4; border-radius: 16px; background: white; box-shadow: 0 12px 32px rgb(40 28 96 / .06); }
   .proof-bar > div { display: flex; align-items: center; justify-content: center; gap: 10px; color: #5f5b72; font-size: 13px; }

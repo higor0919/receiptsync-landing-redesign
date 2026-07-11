@@ -43,7 +43,7 @@ const APP_STORE_URL =
 const PLAY_STORE_URL =
   "https://play.google.com/store/apps/details?id=com.app.receipt_sync";
 
-const workflowImage = "/manus-storage/receiptsync-real-portal_7e2a0bc6.webp";
+const workflowImage = "/manus-storage/receiptsync-workflow_242ebfd1.png";
 const heroImage = "/manus-storage/receiptsync-authentic-hero_5b26b732.webp";
 const portalImage = "/manus-storage/receiptsync-dashboard_8af2c147.png";
 const logoImage = "/manus-storage/receiptsync-authentic-logo_0287e1a5.png";
@@ -257,7 +257,7 @@ export default function Home() {
                   );
                 })}
               </div>
-              <img src={workflowImage} alt="Actual Receipt Sync web portal showing receipt totals, spending insights, budget progress, and recent receipts" />
+              <img src={workflowImage} alt="Receipt captured on a phone, extracted by AI, and synced to Receipt Sync and Google Sheets" />
               <div className="workflow-captions">
                 <p>Scan on mobile or upload on web</p>
                 <p>AI verifies every key detail</p>

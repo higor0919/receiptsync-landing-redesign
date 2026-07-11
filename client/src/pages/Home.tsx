@@ -43,13 +43,20 @@ const APP_STORE_URL =
 const PLAY_STORE_URL =
   "https://play.google.com/store/apps/details?id=com.app.receipt_sync";
 
-const workflowImage = "/manus-storage/receiptsync-workflow_242ebfd1.png";
-const heroImage = "/manus-storage/receiptsync-authentic-hero_5b26b732.webp";
-const portalImage = "/manus-storage/receiptsync-dashboard_8af2c147.png";
-const logoImage = "/manus-storage/receiptsync-authentic-logo_0287e1a5.png";
-const receiptsImage = "/manus-storage/receiptsync-receipts_8384c8c5.png";
-const sheetsImage = "/manus-storage/receiptsync-sheets_1df3254b.png";
-const cameraImage = "/manus-storage/receiptsync-camera-scan_66e02798.png";
+const workflowImage =
+  "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028688699/uKJlKbehUuElWrbl.png";
+const heroImage =
+  "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028688699/TuArDKBZHYKnLzHm.webp";
+const portalImage =
+  "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028688699/hATjwAHGiVANcgkv.png";
+const logoImage =
+  "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028688699/VIQJqCldEdQkphLD.png";
+const receiptsImage =
+  "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028688699/PzXZGkDuoglEWHOE.png";
+const sheetsImage =
+  "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028688699/CXNctAoDNSZzbFCe.png";
+const cameraImage =
+  "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028688699/LddfARtiTSghtQgD.png";
 
 const audiences = {
   freelancers: {

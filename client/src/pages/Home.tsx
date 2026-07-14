@@ -238,6 +238,38 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="trust-band" aria-labelledby="trust-band-title">
+          <div className="container trust-band-shell">
+            <div className="trust-band-intro">
+              <div className="trust-band-count"><Users size={22} /> 1,000+</div>
+              <h2 id="trust-band-title">Trusted by people choosing less receipt admin.</h2>
+              <p>A growing community is turning receipt photos into organized, usable expense data.</p>
+            </div>
+            <div className="trust-signal-grid" aria-label="Receipt Sync trust signals">
+              <a className="trust-signal" href={APP_STORE_URL} target="_blank" rel="noreferrer">
+                <span className="trust-signal-icon"><Smartphone /></span>
+                <span><small>Available on the</small><strong>App Store</strong></span>
+                <ChevronRight aria-hidden="true" />
+              </a>
+              <a className="trust-signal" href={PLAY_STORE_URL} target="_blank" rel="noreferrer">
+                <span className="trust-signal-icon"><Globe2 /></span>
+                <span><small>Available on</small><strong>Google Play</strong></span>
+                <ChevronRight aria-hidden="true" />
+              </a>
+              <div className="trust-signal">
+                <span className="trust-signal-icon"><FileSpreadsheet /></span>
+                <span><small>Works directly with</small><strong>Google Sheets</strong></span>
+                <CheckCircle2 aria-hidden="true" />
+              </div>
+              <a className="trust-signal" href={`${PLAY_STORE_URL}&hl=en_US`} target="_blank" rel="noreferrer">
+                <span className="trust-signal-icon"><ShieldCheck /></span>
+                <span><small>Google Play data safety</small><strong>No data shared</strong><em>Developer-declared</em></span>
+                <ChevronRight aria-hidden="true" />
+              </a>
+            </div>
+          </div>
+        </section>
+
         <section id="workflow" className="section section-workflow">
           <div className="container">
             <FlowMarker number="01" label="Capture → structure" />

@@ -35,3 +35,13 @@
 - [x] Validate visual fidelity on desktop and mobile
 - [x] Run TypeScript checks and the production build
 - [ ] Save a corrected project checkpoint
+
+## Expensify sample-logo visual test
+
+- [x] Identify the exact recognizable brand logos in Expensify’s current marquee
+- [x] Replace Receipt Sync ecosystem icons with the matched sample brand-logo sequence
+- [x] Add a concise prototype disclosure that the sample logos are not endorsements
+- [x] Match Expensify’s monochrome logo sizing, spacing, and continuous motion
+- [x] Validate all logos on desktop and mobile
+- [x] Run TypeScript checks and the production build
+- [x] Save the visual-test checkpoint

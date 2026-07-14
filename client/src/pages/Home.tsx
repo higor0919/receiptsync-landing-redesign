@@ -58,12 +58,16 @@ const sheetsImage =
 const cameraImage =
   "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028688699/LddfARtiTSghtQgD.png";
 
-const ecosystemMarks = [
-  { name: "App Store", icon: "https://cdn.simpleicons.org/apple/FFFFFF" },
-  { name: "Google Play", icon: "https://cdn.simpleicons.org/googleplay/FFFFFF" },
-  { name: "Google Sheets", icon: "https://cdn.simpleicons.org/googlesheets/FFFFFF" },
-  { name: "Android", icon: "https://cdn.simpleicons.org/android/FFFFFF" },
-  { name: "Receipt Sync", icon: logoImage },
+const sampleBrandMarks = [
+  { name: "G2", icon: "https://d2k5nsl2zxldvw.cloudfront.net/images/homepage/2024/logo_G2.svg" },
+  { name: "Xero", icon: "https://d2k5nsl2zxldvw.cloudfront.net/images/homepage/2024/logo_xero.svg" },
+  { name: "Tribeca Film Festival", icon: "https://d2k5nsl2zxldvw.cloudfront.net/images/homepage/2024/logo_tribeca.svg" },
+  { name: "Pinterest", icon: "https://d2k5nsl2zxldvw.cloudfront.net/images/homepage/2024/logo_pinterest.svg" },
+  { name: "Warby Parker", icon: "https://d2k5nsl2zxldvw.cloudfront.net/images/homepage/2024/logo_warby.svg" },
+  { name: "Swatch Group", icon: "https://d2k5nsl2zxldvw.cloudfront.net/images/homepage/2024/logo_swatch.svg" },
+  { name: "Brooklyn Nets", icon: "https://d2k5nsl2zxldvw.cloudfront.net/images/homepage/2024/logo_brooklynnets.svg" },
+  { name: "University of Kentucky", icon: "https://d2k5nsl2zxldvw.cloudfront.net/images/homepage/2024/logo_uk.svg" },
+  { name: "GitHub", icon: "https://d2k5nsl2zxldvw.cloudfront.net/images/homepage/2024/logo_github.svg" },
 ];
 
 const audiences = {
@@ -232,16 +236,16 @@ export default function Home() {
 
         <section className="member-trust-band" aria-labelledby="member-trust-title">
           <h2 id="member-trust-title">Join 1,000+ members who trust Receipt Sync</h2>
-          <div className="member-logo-window" aria-label="Receipt Sync works across your everyday platforms">
+          <div className="member-logo-window" aria-label="Sample brand-logo layout preview">
             <div className="member-logo-track">
-              {[...ecosystemMarks, ...ecosystemMarks].map((mark, index) => (
-                <div className="member-logo" key={`${mark.name}-${index}`} aria-hidden={index >= ecosystemMarks.length}>
-                  <img src={mark.icon} alt="" />
-                  <span>{mark.name}</span>
+              {[...sampleBrandMarks, ...sampleBrandMarks].map((mark, index) => (
+                <div className="member-logo" key={`${mark.name}-${index}`} aria-hidden={index >= sampleBrandMarks.length}>
+                  <img src={mark.icon} alt={index < sampleBrandMarks.length ? mark.name : ""} />
                 </div>
               ))}
             </div>
           </div>
+          <p className="member-disclosure">Concept preview · Sample logos for layout only, not endorsements</p>
         </section>
 
         <section className="stats-strip" aria-label="Product performance">

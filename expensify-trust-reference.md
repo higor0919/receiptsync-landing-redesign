@@ -14,3 +14,9 @@ The current Expensify homepage places the trust section immediately after the he
 ## Receipt Sync adaptation
 
 Reproduce the same composition and restraint using Receipt Sync’s deep-violet brand color, the exact requested heading “Join 1,000+ members who trust Receipt Sync,” and a single monochrome marquee of **verified ecosystem marks** rather than invented customer endorsements. Suitable verified marks are App Store, Google Play, Google Sheets, iOS, and Android.
+
+## Exact live logo sequence for the visual prototype
+
+The current Expensify page exposes these nine monochrome SVG assets in order: **G2, Xero, Tribeca Film Festival, Pinterest, Warby Parker, Swatch Group, Brooklyn Nets, University of Kentucky, and GitHub**. The visible reference viewport shows Tribeca, Pinterest, Warby Parker, Swatch Group, Brooklyn Nets, University of Kentucky, and GitHub across one evenly spaced row.
+
+For the requested layout-only test, use Expensify’s live SVG assets in the same order and include a visible disclosure stating that the sample logos are not Receipt Sync endorsements.

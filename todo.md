@@ -24,3 +24,14 @@
 - [x] Validate the section on desktop and mobile
 - [x] Run TypeScript checks and the production build
 - [ ] Save a new checkpoint for the trust-section update
+
+## Expensify-style trust section correction
+
+- [x] Inspect the current Expensify membership and logo section at desktop and mobile sizes
+- [x] Document its exact composition, typography, spacing, and logo treatment
+- [x] Remove the previous multi-card Receipt Sync trust band
+- [x] Rebuild the section to closely match the Expensify reference
+- [x] Use the copy “Join 1,000+ members who trust Receipt Sync”
+- [x] Validate visual fidelity on desktop and mobile
+- [x] Run TypeScript checks and the production build
+- [ ] Save a corrected project checkpoint

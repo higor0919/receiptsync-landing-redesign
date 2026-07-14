@@ -58,6 +58,14 @@ const sheetsImage =
 const cameraImage =
   "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028688699/LddfARtiTSghtQgD.png";
 
+const ecosystemMarks = [
+  { name: "App Store", icon: "https://cdn.simpleicons.org/apple/FFFFFF" },
+  { name: "Google Play", icon: "https://cdn.simpleicons.org/googleplay/FFFFFF" },
+  { name: "Google Sheets", icon: "https://cdn.simpleicons.org/googlesheets/FFFFFF" },
+  { name: "Android", icon: "https://cdn.simpleicons.org/android/FFFFFF" },
+  { name: "Receipt Sync", icon: logoImage },
+];
+
 const audiences = {
   freelancers: {
     label: "Freelancers",
@@ -222,6 +230,20 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="member-trust-band" aria-labelledby="member-trust-title">
+          <h2 id="member-trust-title">Join 1,000+ members who trust Receipt Sync</h2>
+          <div className="member-logo-window" aria-label="Receipt Sync works across your everyday platforms">
+            <div className="member-logo-track">
+              {[...ecosystemMarks, ...ecosystemMarks].map((mark, index) => (
+                <div className="member-logo" key={`${mark.name}-${index}`} aria-hidden={index >= ecosystemMarks.length}>
+                  <img src={mark.icon} alt="" />
+                  <span>{mark.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section className="stats-strip" aria-label="Product performance">
           <div className="container stats-grid">
             {[
@@ -235,38 +257,6 @@ export default function Home() {
                 <span>{label}</span>
               </div>
             ))}
-          </div>
-        </section>
-
-        <section className="trust-band" aria-labelledby="trust-band-title">
-          <div className="container trust-band-shell">
-            <div className="trust-band-intro">
-              <div className="trust-band-count"><Users size={22} /> 1,000+</div>
-              <h2 id="trust-band-title">Trusted by people choosing less receipt admin.</h2>
-              <p>A growing community is turning receipt photos into organized, usable expense data.</p>
-            </div>
-            <div className="trust-signal-grid" aria-label="Receipt Sync trust signals">
-              <a className="trust-signal" href={APP_STORE_URL} target="_blank" rel="noreferrer">
-                <span className="trust-signal-icon"><Smartphone /></span>
-                <span><small>Available on the</small><strong>App Store</strong></span>
-                <ChevronRight aria-hidden="true" />
-              </a>
-              <a className="trust-signal" href={PLAY_STORE_URL} target="_blank" rel="noreferrer">
-                <span className="trust-signal-icon"><Globe2 /></span>
-                <span><small>Available on</small><strong>Google Play</strong></span>
-                <ChevronRight aria-hidden="true" />
-              </a>
-              <div className="trust-signal">
-                <span className="trust-signal-icon"><FileSpreadsheet /></span>
-                <span><small>Works directly with</small><strong>Google Sheets</strong></span>
-                <CheckCircle2 aria-hidden="true" />
-              </div>
-              <a className="trust-signal" href={`${PLAY_STORE_URL}&hl=en_US`} target="_blank" rel="noreferrer">
-                <span className="trust-signal-icon"><ShieldCheck /></span>
-                <span><small>Google Play data safety</small><strong>No data shared</strong><em>Developer-declared</em></span>
-                <ChevronRight aria-hidden="true" />
-              </a>
-            </div>
           </div>
         </section>
 

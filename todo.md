@@ -45,3 +45,10 @@
 - [x] Validate all logos on desktop and mobile
 - [x] Run TypeScript checks and the production build
 - [x] Save the visual-test checkpoint
+
+## Trust-band disclosure removal
+
+- [x] Remove the concept-preview disclosure from the trust band
+- [x] Rebalance the band spacing after removing the text
+- [x] Validate the production build and responsive rendering
+- [x] Save the corrected checkpoint

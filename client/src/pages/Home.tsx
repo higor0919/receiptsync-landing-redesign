@@ -245,7 +245,6 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <p className="member-disclosure">Concept preview · Sample logos for layout only, not endorsements</p>
         </section>
 
         <section className="stats-strip" aria-label="Product performance">

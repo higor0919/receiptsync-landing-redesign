@@ -234,19 +234,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="member-trust-band" aria-labelledby="member-trust-title">
-          <h2 id="member-trust-title">Join 1,000+ members who trust Receipt Sync</h2>
-          <div className="member-logo-window" aria-label="Sample brand-logo layout preview">
-            <div className="member-logo-track">
-              {[...sampleBrandMarks, ...sampleBrandMarks].map((mark, index) => (
-                <div className="member-logo" key={`${mark.name}-${index}`} aria-hidden={index >= sampleBrandMarks.length}>
-                  <img src={mark.icon} alt={index < sampleBrandMarks.length ? mark.name : ""} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section className="stats-strip" aria-label="Product performance">
           <div className="container stats-grid">
             {[
@@ -260,6 +247,19 @@ export default function Home() {
                 <span>{label}</span>
               </div>
             ))}
+          </div>
+        </section>
+
+        <section className="member-trust-band" aria-labelledby="member-trust-title">
+          <h2 id="member-trust-title">Join 1,000+ members who trust Receipt Sync</h2>
+          <div className="member-logo-window" aria-label="Brand logos">
+            <div className="member-logo-track">
+              {[...sampleBrandMarks, ...sampleBrandMarks].map((mark, index) => (
+                <div className="member-logo" key={`${mark.name}-${index}`} aria-hidden={index >= sampleBrandMarks.length}>
+                  <img src={mark.icon} alt={index < sampleBrandMarks.length ? mark.name : ""} />
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 

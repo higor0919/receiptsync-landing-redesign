@@ -52,3 +52,11 @@
 - [x] Rebalance the band spacing after removing the text
 - [x] Validate the production build and responsive rendering
 - [x] Save the corrected checkpoint
+
+## Trust-band position update
+
+- [x] Move the four-metric performance strip directly below the hero
+- [x] Place the trust heading and logo marquee below the performance strip
+- [x] Validate the reordered transition on desktop and mobile
+- [x] Run TypeScript checks and the production build
+- [x] Save the reordered checkpoint

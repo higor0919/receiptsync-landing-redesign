@@ -1,7 +1,7 @@
 /**
- * PRECISION FLOW — Receipt Sync landing page.
- * Preserve the confident purple hero, then guide visitors through a calm receipt-to-data narrative.
- * Pink is reserved for conversion; lavender frames product proof; web signup is the primary path.
+ * OUTCOME-LED PROOF RIBBON — ReceiptSync landing page.
+ * The page leads with the Google Sheets result, then earns the trial with visible workflow proof.
+ * Deep violet carries confidence; Receipt Pink is reserved for the one decisive action.
  */
 import { useState } from "react";
 import {
@@ -12,16 +12,11 @@ import {
 } from "@/components/ui/accordion";
 import {
   ArrowRight,
-  BarChart3,
-  BriefcaseBusiness,
   Check,
   CheckCircle2,
-  ChevronRight,
-  Clock3,
   FileCheck2,
   FileSpreadsheet,
   Globe2,
-  Home as HomeIcon,
   LockKeyhole,
   Menu,
   ReceiptText,
@@ -29,9 +24,7 @@ import {
   ShieldCheck,
   Smartphone,
   Sparkles,
-  Trash2,
   Upload,
-  Users,
   X,
   Zap,
 } from "lucide-react";
@@ -43,83 +36,23 @@ const APP_STORE_URL =
 const PLAY_STORE_URL =
   "https://play.google.com/store/apps/details?id=com.app.receipt_sync";
 
-const workflowImage =
-  "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028688699/uKJlKbehUuElWrbl.png";
 const heroImage =
   "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028688699/TuArDKBZHYKnLzHm.webp";
+const workflowImage =
+  "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028688699/uKJlKbehUuElWrbl.png";
 const portalImage =
   "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028688699/hATjwAHGiVANcgkv.png";
 const logoImage =
   "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028688699/VIQJqCldEdQkphLD.png";
-const receiptsImage =
-  "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028688699/PzXZGkDuoglEWHOE.png";
-const sheetsImage =
-  "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028688699/CXNctAoDNSZzbFCe.png";
 const cameraImage =
   "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028688699/LddfARtiTSghtQgD.png";
 
-const sampleBrandMarks = [
-  { name: "G2", icon: "https://d2k5nsl2zxldvw.cloudfront.net/images/homepage/2024/logo_G2.svg" },
-  { name: "Xero", icon: "https://d2k5nsl2zxldvw.cloudfront.net/images/homepage/2024/logo_xero.svg" },
-  { name: "Tribeca Film Festival", icon: "https://d2k5nsl2zxldvw.cloudfront.net/images/homepage/2024/logo_tribeca.svg" },
-  { name: "Pinterest", icon: "https://d2k5nsl2zxldvw.cloudfront.net/images/homepage/2024/logo_pinterest.svg" },
-  { name: "Warby Parker", icon: "https://d2k5nsl2zxldvw.cloudfront.net/images/homepage/2024/logo_warby.svg" },
-  { name: "Swatch Group", icon: "https://d2k5nsl2zxldvw.cloudfront.net/images/homepage/2024/logo_swatch.svg" },
-  { name: "Brooklyn Nets", icon: "https://d2k5nsl2zxldvw.cloudfront.net/images/homepage/2024/logo_brooklynnets.svg" },
-  { name: "University of Kentucky", icon: "https://d2k5nsl2zxldvw.cloudfront.net/images/homepage/2024/logo_uk.svg" },
-  { name: "GitHub", icon: "https://d2k5nsl2zxldvw.cloudfront.net/images/homepage/2024/logo_github.svg" },
-];
-
-const audiences = {
-  freelancers: {
-    label: "Freelancers",
-    icon: BriefcaseBusiness,
-    title: "Never lose another business deduction",
-    description:
-      "Turn every client lunch, software renewal, and travel receipt into a clean, searchable record.",
-    bullets: [
-      "Separate business expenses automatically",
-      "Keep receipt evidence searchable",
-      "Share a clean Sheet with your accountant",
-    ],
-    visual: receiptsImage,
-    visualLabel: "Receipt evidence linked",
-  },
-  businesses: {
-    label: "Small businesses",
-    icon: Users,
-    title: "Give your team one expense workflow",
-    description:
-      "Collect receipts consistently and keep your records organized without heavyweight expense software.",
-    bullets: [
-      "Standardize expense capture",
-      "Review records from the web portal",
-      "Export clean reports when needed",
-    ],
-    visual: portalImage,
-    visualLabel: "Team records reviewed",
-  },
-  households: {
-    label: "Households",
-    icon: HomeIcon,
-    title: "See the full story behind your spending",
-    description:
-      "Keep receipts, budgets, and recurring expenses connected in one easy-to-understand view.",
-    bullets: [
-      "Track everyday purchases",
-      "Spot recurring expenses",
-      "Build clearer monthly habits",
-    ],
-    visual: sheetsImage,
-    visualLabel: "Spending sheet updated",
-  },
-} as const;
-
-type AudienceKey = keyof typeof audiences;
+const proofRibbonImage = "/manus-storage/receiptsync-proof-ribbon_72b5eb35.png";
+const securityOrbImage = "/manus-storage/receiptsync-security-orb_ce190772.png";
 
 function Logo({ light = false }: { light?: boolean }) {
   return (
-    <a href="#top" className="brand-lockup" aria-label="Receipt Sync home">
+    <a href="#top" className="brand-lockup" aria-label="ReceiptSync home">
       <img src={logoImage} alt="" className="brand-mark" />
       <span className={light ? "text-white" : "text-ink"}>ReceiptSync</span>
     </a>
@@ -149,7 +82,7 @@ function StoreButton({ kind }: { kind: "apple" | "google" }) {
       target="_blank"
       rel="noreferrer"
     >
-      {isApple ? <Smartphone size={20} /> : <Globe2 size={20} />}
+      {isApple ? <Smartphone size={19} /> : <Globe2 size={19} />}
       <span>
         <small>{isApple ? "Download on the" : "Get it on"}</small>
         <strong>{isApple ? "App Store" : "Google Play"}</strong>
@@ -160,8 +93,6 @@ function StoreButton({ kind }: { kind: "apple" | "google" }) {
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [audience, setAudience] = useState<AudienceKey>("freelancers");
-  const activeAudience = audiences[audience];
 
   return (
     <div id="top" className="min-h-screen bg-white text-ink">
@@ -169,15 +100,15 @@ export default function Home() {
         <div className="container nav-shell">
           <Logo light />
           <nav className="desktop-nav" aria-label="Primary navigation">
-            <a href="#workflow">How it works</a>
-            <a href="#outcomes">Benefits</a>
-            <a href="#portal">Web portal</a>
+            <a href="#proof">How it works</a>
+            <a href="#benefits">Benefits</a>
+            <a href="#security">Security</a>
             <a href="#pricing">Pricing</a>
             <a href="#faq">FAQ</a>
           </nav>
           <div className="nav-actions">
             <a className="login-link" href={LOGIN_URL}>Log in</a>
-            <a className="button button-pink button-small" href={SIGNUP_URL}>Sign up</a>
+            <a className="button button-pink button-small" href={`${SIGNUP_URL}?plan=monthly`}>Start trial</a>
           </div>
           <button
             className="mobile-menu-button"
@@ -190,12 +121,12 @@ export default function Home() {
         </div>
         {menuOpen && (
           <nav className="mobile-nav" aria-label="Mobile navigation">
-            <a href="#workflow" onClick={() => setMenuOpen(false)}>How it works</a>
-            <a href="#outcomes" onClick={() => setMenuOpen(false)}>Benefits</a>
-            <a href="#portal" onClick={() => setMenuOpen(false)}>Web portal</a>
+            <a href="#proof" onClick={() => setMenuOpen(false)}>How it works</a>
+            <a href="#benefits" onClick={() => setMenuOpen(false)}>Benefits</a>
+            <a href="#security" onClick={() => setMenuOpen(false)}>Security</a>
             <a href="#pricing" onClick={() => setMenuOpen(false)}>Pricing</a>
             <a href="#faq" onClick={() => setMenuOpen(false)}>FAQ</a>
-            <a href={SIGNUP_URL} className="button button-pink">Start free</a>
+            <a href={`${SIGNUP_URL}?plan=monthly`} className="button button-pink">Start 14-day free trial</a>
           </nav>
         )}
       </header>
@@ -206,41 +137,69 @@ export default function Home() {
           <div className="hero-orb hero-orb-two" />
           <div className="container hero-grid">
             <div className="hero-copy reveal">
-              <div className="hero-badge"><Sparkles size={16} /> AI-powered receipt scanner</div>
-              <h1>
-                Snap. <em>Extract.</em><br />
-                Organize.<br />
-                <em>Automatically.</em>
-              </h1>
-              <p>From photo to spreadsheet in seconds.</p>
-              <div className="hero-cta-row">
-                <a className="button button-pink button-large" href={`${SIGNUP_URL}?plan=monthly`}>
-                  Start my free trial <ArrowRight size={18} />
-                </a>
-                <span className="trial-note"><CheckCircle2 size={16} /> No credit card required</span>
+              <div className="hero-brand-band">
+                <img src={logoImage} alt="" />
+                <strong>ReceiptSync</strong>
+                <i />
+                <span>Receipt-to-Sheets workflow</span>
               </div>
-              <div className="store-row">
-                <StoreButton kind="apple" />
-                <StoreButton kind="google" />
+              <div className="hero-badge"><Sparkles size={16} /> Built for freelancers &amp; owner-operators</div>
+              <h1>
+                Turn every receipt into a <em>clean Google Sheet.</em>
+              </h1>
+              <p>Snap or upload a receipt, review the extracted details, and sync a ready-to-use expense row without manual entry.</p>
+              <div className="hero-primary-actions">
+                <a className="button button-pink button-large" href={`${SIGNUP_URL}?plan=monthly`}>
+                  Start 14-day free trial <ArrowRight size={18} />
+                </a>
+                <a className="text-action text-action-light" href="#proof">See the workflow <ArrowRight size={17} /></a>
+              </div>
+              <p className="hero-assurance"><CheckCircle2 size={16} /> No credit card required <span>·</span> Review details before you sync</p>
+              <div className="store-availability">
+                <span>Also available on</span>
+                <div className="store-row">
+                  <StoreButton kind="apple" />
+                  <StoreButton kind="google" />
+                </div>
               </div>
             </div>
-            <div className="hero-art reveal reveal-delay-1">
-              <div className="hero-image-frame">
-                <img src={heroImage} alt="Receipt Sync mobile receipt scanner" />
+
+            <div className="hero-art reveal reveal-delay-1" aria-label="ReceiptSync receipt capture and Google Sheets workflow">
+              <div className="hero-proof-system">
+                <article className="hero-receipt-input">
+                  <div className="proof-panel-meta"><span>01</span> Receipt input</div>
+                  <img src={heroImage} alt="ReceiptSync mobile receipt scanner" />
+                  <div className="proof-panel-footer"><ScanLine size={15} /> Captured on mobile</div>
+                </article>
+                <article className="hero-extraction-ledger">
+                  <div className="proof-panel-meta"><span>02</span> Review ready</div>
+                  <div className="extraction-title"><FileCheck2 size={16} /> Extracted fields</div>
+                  <div className="extraction-field"><span>Merchant</span><strong>Harvest Market</strong></div>
+                  <div className="extraction-field"><span>Date</span><strong>Mar 21, 2026</strong></div>
+                  <div className="extraction-field"><span>Total</span><strong>$42.80</strong></div>
+                  <div className="extraction-field"><span>Category</span><strong>Office supplies</strong></div>
+                  <div className="review-ready"><CheckCircle2 size={14} /> Ready for your review</div>
+                </article>
+                <article className="hero-sheet-output">
+                  <div className="proof-panel-meta"><span>03</span> Google Sheets row</div>
+                  <div className="sheet-mini-grid">
+                    <span>Merchant</span><span>Date</span><span>Total</span><span>Category</span>
+                    <strong>Harvest Market</strong><strong>03/21</strong><strong>$42.80</strong><strong>Office supplies</strong>
+                  </div>
+                  <div className="sheet-status"><FileSpreadsheet size={15} /> Synced to your Sheet</div>
+                </article>
               </div>
-              <div className="floating-chip chip-one"><Zap size={15} /> 5-second extraction</div>
-              <div className="floating-chip chip-two"><FileSpreadsheet size={15} /> Sheets synced</div>
             </div>
           </div>
         </section>
 
-        <section className="stats-strip" aria-label="Product performance">
+        <section className="stats-strip" aria-label="ReceiptSync workflow assurances">
           <div className="container stats-grid">
             {[
-              ["<30 sec", "Setup time"],
-              ["99%+", "AI accuracy"],
-              ["5 sec", "Per receipt"],
-              ["10 hrs+", "Saved monthly"],
+              ["< 2 min", "Set up your workflow"],
+              ["1 receipt", "→ 1 organized record"],
+              ["Review", "before each sync"],
+              ["Google Sheets", "kept up to date"],
             ].map(([value, label]) => (
               <div className="stat" key={label}>
                 <strong>{value}</strong>
@@ -250,86 +209,80 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="member-trust-band" aria-labelledby="member-trust-title">
-          <h2 id="member-trust-title">Join 1,000+ members who trust Receipt Sync</h2>
-          <div className="member-logo-window" aria-label="Brand logos">
-            <div className="member-logo-track">
-              {[...sampleBrandMarks, ...sampleBrandMarks].map((mark, index) => (
-                <div className="member-logo" key={`${mark.name}-${index}`} aria-hidden={index >= sampleBrandMarks.length}>
-                  <img src={mark.icon} alt={index < sampleBrandMarks.length ? mark.name : ""} />
+        <section id="proof" className="proof-ribbon-section">
+          <div className="container proof-ribbon">
+            <div className="proof-ribbon-art reveal">
+              <img className="proof-schematic-bg" src={proofRibbonImage} alt="" />
+              <div className="proof-evidence-board" aria-label="Receipt to reviewed Google Sheets row example">
+                <div className="evidence-receipt">
+                  <div className="evidence-label">Receipt input</div>
+                  <div className="receipt-rule receipt-rule-wide" />
+                  <div className="receipt-rule" /><div className="receipt-rule" /><div className="receipt-rule receipt-rule-short" />
+                  <strong>$42.80</strong>
+                  <div className="receipt-rule receipt-rule-wide" />
                 </div>
-              ))}
+                <div className="evidence-arrow"><ArrowRight /></div>
+                <div className="evidence-review">
+                  <div className="evidence-label"><CheckCircle2 size={14} /> Review fields</div>
+                  <span>Merchant <b>Harvest Market</b></span>
+                  <span>Date <b>Mar 21, 2026</b></span>
+                  <span>Total <b>$42.80</b></span>
+                  <span>Category <b>Office supplies</b></span>
+                </div>
+                <div className="evidence-arrow evidence-arrow-last"><ArrowRight /></div>
+                <div className="evidence-sheet">
+                  <div className="evidence-label"><FileSpreadsheet size={14} /> Your Google Sheet</div>
+                  <div className="evidence-sheet-grid"><span>Merchant</span><span>Date</span><span>Total</span><span>Category</span><b>Harvest Market</b><b>03/21</b><b>$42.80</b><b>Office supplies</b></div>
+                </div>
+              </div>
+              <div className="proof-art-label proof-art-label-top"><Sparkles size={15} /> Structured details</div>
+              <div className="proof-art-label proof-art-label-bottom"><CheckCircle2 size={15} /> Ready for your Sheet</div>
+            </div>
+            <div className="proof-ribbon-copy">
+              <Eyebrow>See the result before you start</Eyebrow>
+              <h2>A receipt becomes a record you can actually use.</h2>
+              <p>ReceiptSync takes the receipt off your desk, turns it into clean expense data, and sends it to the spreadsheet you already manage.</p>
+              <ol className="proof-steps">
+                <li><span>01</span><ScanLine /><div><strong>Capture</strong><small>Scan from your phone or upload from the web.</small></div></li>
+                <li><span>02</span><FileCheck2 /><div><strong>Review</strong><small>Check the extracted merchant, date, total, tax, and category.</small></div></li>
+                <li><span>03</span><FileSpreadsheet /><div><strong>Sync</strong><small>Send a verified row straight into your chosen Google Sheet.</small></div></li>
+              </ol>
+              <div className="proof-ribbon-actions">
+                <a className="button button-pink" href={`${SIGNUP_URL}?plan=monthly`}>Start 14-day free trial <ArrowRight size={17} /></a>
+                <span><LockKeyhole size={15} /> You choose the Google account and Sheet.</span>
+              </div>
             </div>
           </div>
         </section>
 
-        <section id="workflow" className="section section-workflow">
+        <div className="conversion-story">
+          <div className="conversion-spine" aria-hidden="true" />
+        <section id="benefits" className="section section-outcomes">
           <div className="container">
-            <FlowMarker number="01" label="Capture → structure" />
+            <FlowMarker number="01" label="Capture better records" />
             <div className="section-heading section-heading-wide">
-              <Eyebrow>Receipts, organized automatically</Eyebrow>
-              <h2>From receipt to spreadsheet—without the admin.</h2>
-              <p>Capture a receipt once. ReceiptSync extracts the details, organizes the expense, and keeps your Google Sheet and web portal up to date.</p>
-            </div>
-
-            <div className="workflow-stage">
-              <div className="workflow-steps">
-                {[
-                  ["01", "Capture", ScanLine],
-                  ["02", "Extract", Sparkles],
-                  ["03", "Sync", FileSpreadsheet],
-                ].map(([number, label, Icon]) => {
-                  const StepIcon = Icon as typeof ScanLine;
-                  return (
-                    <div className="workflow-step" key={label as string}>
-                      <span>{number as string}</span>
-                      <StepIcon size={18} />
-                      <strong>{label as string}</strong>
-                    </div>
-                  );
-                })}
-              </div>
-              <img src={workflowImage} alt="Receipt captured on a phone, extracted by AI, and synced to Receipt Sync and Google Sheets" />
-              <div className="workflow-captions">
-                <p>Scan on mobile or upload on web</p>
-                <p>AI verifies every key detail</p>
-                <p>Updates instantly across your workflow</p>
-              </div>
-            </div>
-
-            <div className="proof-bar">
-              <div><ShieldCheck /> <span><strong>99%+</strong> extraction accuracy</span></div>
-              <div><Zap /> <span><strong>5 seconds</strong> per receipt</span></div>
-              <div><FileSpreadsheet /> <span><strong>Live</strong> Google Sheets sync</span></div>
-            </div>
-          </div>
-        </section>
-
-        <section id="outcomes" className="section section-outcomes">
-          <div className="container">
-            <FlowMarker number="02" label="Structure → outcomes" />
-            <div className="section-heading">
-              <Eyebrow>Built for real-world expenses</Eyebrow>
-              <h2>Less receipt work. More time for what matters.</h2>
+              <Eyebrow>Less admin. Better records.</Eyebrow>
+              <h2>Turn a stack of receipts into an expense workflow you trust.</h2>
+              <p>Every part of ReceiptSync exists to make the information behind a receipt easier to find, verify, share, and use again.</p>
             </div>
             <div className="outcome-grid">
               {[
                 {
-                  icon: FileCheck2,
-                  title: "Tax-ready records",
-                  copy: "Keep searchable receipts and categorized expenses ready for deductions, reimbursements, and year-end reporting.",
+                  icon: Zap,
+                  title: "Stop retyping expenses",
+                  copy: "Move from receipt capture to structured fields without the repetitive spreadsheet work.",
                   color: "violet",
                 },
                 {
-                  icon: Clock3,
-                  title: "Hours of admin removed",
-                  copy: "Replace manual spreadsheet entry with an automated capture-to-Sheets workflow.",
+                  icon: FileCheck2,
+                  title: "Keep the evidence close",
+                  copy: "Store the receipt beside an organized record so it is easy to find when you need to review it.",
                   color: "pink",
                 },
                 {
-                  icon: BarChart3,
-                  title: "Clearer spending",
-                  copy: "See where money is going through the web portal, budgets, recurring expenses, and reports.",
+                  icon: FileSpreadsheet,
+                  title: "Keep your Sheet usable",
+                  copy: "Bring receipt data into the flexible spreadsheet workflow you already understand.",
                   color: "blue",
                 },
               ].map((item) => (
@@ -343,103 +296,86 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="section process-section" aria-labelledby="process-title">
+          <div className="container">
+            <FlowMarker number="02" label="Review with clarity" />
+            <div className="process-showcase">
+              <div className="process-copy">
+                <Eyebrow>One simple sequence</Eyebrow>
+                <h2 id="process-title">Clear enough to trust. Fast enough to use every day.</h2>
+                <p>Start with the receipt, not a complicated expense system. Review the important fields once, then let your Sheet carry the record forward.</p>
+                <div className="process-points">
+                  <div><Upload /><span><strong>Capture from the device you have</strong><small>Scan on mobile or add receipts from the web portal.</small></span></div>
+                  <div><CheckCircle2 /><span><strong>Keep the final check in your hands</strong><small>Review the data before it becomes part of your workflow.</small></span></div>
+                  <div><FileSpreadsheet /><span><strong>Stay in the spreadsheet you own</strong><small>Keep your expense data where you already work.</small></span></div>
+                </div>
+                <a className="text-action" href={`${SIGNUP_URL}?plan=monthly`}>Start your free trial <ArrowRight size={17} /></a>
+              </div>
+              <div className="process-art">
+                <img src={workflowImage} alt="ReceiptSync capture, extraction, and sync workflow" />
+                <div className="process-caption"><ShieldCheck size={17} /> Reviewable records, not black-box automation</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="portal" className="section portal-wrap">
           <div className="container">
-            <FlowMarker number="03" label="Review → sync" />
+            <FlowMarker number="03" label="Sync where you work" />
             <div className="portal-panel">
               <div className="portal-copy">
-                <Eyebrow>Works where you do</Eyebrow>
-                <h2>Scan on mobile. Manage everything on the web.</h2>
-                <p>Upload receipts from your desktop, review extracted data, track expenses, and export reports from one organized portal.</p>
+                <Eyebrow>Mobile capture. Web control.</Eyebrow>
+                <h2>Scan in the moment. Review everything when you are ready.</h2>
+                <p>Use the mobile app to capture receipts quickly, then use the web portal to review extracted records, track expenses, and export reports.</p>
                 <ul className="check-list">
                   {[
                     "Mobile capture and web uploads",
-                    "Live Google Sheets sync",
-                    "PDF and Excel reports",
-                    "iOS and Android included",
+                    "Your Google Sheets workflow stays connected",
+                    "Receipt records ready for review and export",
+                    "Available on iOS and Android",
                   ].map((item) => <li key={item}><Check /> {item}</li>)}
                 </ul>
-                <a className="button button-pink button-large" href={SIGNUP_URL}>Start free on the web <ArrowRight size={18} /></a>
-                <p className="microcopy">14-day free trial · No credit card required</p>
+                <a className="button button-pink button-large" href={`${SIGNUP_URL}?plan=monthly`}>Start 14-day free trial <ArrowRight size={18} /></a>
+                <p className="microcopy">No credit card required to start.</p>
               </div>
               <div className="portal-art">
-                <img src={portalImage} alt="Receipt Sync web portal and mobile app working together" />
-                <div className="sync-status"><CheckCircle2 /> Google Sheets synced</div>
-                <div className="verified-status"><FileCheck2 /> 8 fields verified</div>
+                <img src={portalImage} alt="ReceiptSync web portal and mobile app working together" />
+                <div className="sync-status"><CheckCircle2 /> Google Sheet connected</div>
+                <div className="verified-status"><FileCheck2 /> Details ready to review</div>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="section audience-section">
+        <section id="security" className="section trust-section">
           <div className="container">
-            <FlowMarker number="04" label="Fit the workflow" />
-            <div className="section-heading section-heading-left">
-              <Eyebrow>One workflow, three ways to use it</Eyebrow>
-              <h2>Built around the way you track expenses.</h2>
-            </div>
-            <div className="audience-tabs" role="tablist" aria-label="Choose an audience">
-              {(Object.keys(audiences) as AudienceKey[]).map((key) => {
-                const item = audiences[key];
-                const Icon = item.icon;
-                return (
-                  <button
-                    key={key}
-                    role="tab"
-                    aria-selected={audience === key}
-                    className={audience === key ? "active" : ""}
-                    onClick={() => setAudience(key)}
-                  >
-                    <Icon size={17} /> {item.label}
-                  </button>
-                );
-              })}
-            </div>
-            <div className="audience-panel">
-              <div className="audience-image">
-                <img src={activeAudience.visual} alt={`${activeAudience.label} expense workflow inside Receipt Sync`} />
-                <div className="image-note"><ReceiptText /> {activeAudience.visualLabel}</div>
-                <div className="image-note image-note-secondary"><CheckCircle2 /> Verified & synced</div>
-              </div>
-              <div className="audience-copy" key={audience}>
-                <activeAudience.icon className="audience-icon" />
-                <h3>{activeAudience.title}</h3>
-                <p>{activeAudience.description}</p>
-                <ul className="benefit-list">
-                  {activeAudience.bullets.map((bullet) => <li key={bullet}><CheckCircle2 /> {bullet}</li>)}
-                </ul>
-                <a href="#pricing">See how ReceiptSync fits your workflow <ChevronRight size={17} /></a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="section trust-section">
-          <div className="container">
-            <FlowMarker number="05" label="Protect every record" />
+            <FlowMarker number="04" label="Protect the handoff" />
             <div className="trust-layout">
               <div className="trust-heading">
                 <Eyebrow>Private by design</Eyebrow>
-                <h2>Your financial data stays yours.</h2>
-                <p>ReceiptSync gives you practical control over sensitive receipt and expense information.</p>
-                <a href="https://receiptsync.net/privacy" target="_blank" rel="noreferrer">Learn about security and privacy <ArrowRight size={17} /></a>
+                <h2>Your financial data stays in your control.</h2>
+                <p>Security and review are not a footer detail. They are part of the workflow before you connect a Sheet and before you send a record.</p>
+                <a className="text-action" href="https://receiptsync.net/privacy" target="_blank" rel="noreferrer">Read the privacy approach <ArrowRight size={17} /></a>
               </div>
-              <div className="trust-grid">
-                {[
-                  [LockKeyhole, "Encrypted", "In transit and at rest"],
-                  [ShieldCheck, "Permission control", "You control Google access"],
-                  [Trash2, "Delete when ready", "Remove receipts when you choose"],
-                  [Sparkles, "Never sold", "Your data is never sold"],
-                ].map(([Icon, title, text]) => {
-                  const TrustIcon = Icon as typeof LockKeyhole;
-                  return (
-                    <article className="trust-card" key={title as string}>
-                      <TrustIcon />
-                      <h3>{title as string}</h3>
-                      <p>{text as string}</p>
-                    </article>
-                  );
-                })}
+              <div className="trust-content">
+                <div className="trust-grid">
+                  {[
+                    [LockKeyhole, "Protected connection", "Connect using secure account authorization rather than sharing a Google password."],
+                    [FileSpreadsheet, "Your Sheet, your choice", "Choose the spreadsheet that ReceiptSync keeps updated."],
+                    [FileCheck2, "Review before sync", "Confirm the important details before they become part of your records."],
+                    [ShieldCheck, "Manage records on your terms", "Keep receipt information organized and remove records when you no longer need them."],
+                  ].map(([Icon, title, text]) => {
+                    const TrustIcon = Icon as typeof LockKeyhole;
+                    return (
+                      <article className="trust-card" key={title as string}>
+                        <TrustIcon />
+                        <h3>{title as string}</h3>
+                        <p>{text as string}</p>
+                      </article>
+                    );
+                  })}
+                </div>
+                <div className="trust-orb" aria-hidden="true"><img src={securityOrbImage} alt="" /></div>
               </div>
             </div>
           </div>
@@ -447,70 +383,75 @@ export default function Home() {
 
         <section id="pricing" className="section pricing-section">
           <div className="container">
-            <FlowMarker number="06" label="Choose your pace" />
+            <FlowMarker number="05" label="Choose your plan" />
             <div className="pricing-layout">
               <div className="pricing-intro">
-                <Eyebrow>Simple pricing</Eyebrow>
-                <h2>Start free. Upgrade when ReceiptSync saves you time.</h2>
-                <p>Everything you need to scan, organize, and sync receipts—without heavyweight expense-software pricing.</p>
-                <div className="pricing-proof"><CheckCircle2 /> All plans include web, iOS, and Android</div>
+                <Eyebrow>Simple, clear pricing</Eyebrow>
+                <h2>Try the workflow first. Choose the plan that fits after.</h2>
+                <p>Start with a 14-day trial, see a receipt land in your Sheet, and pick the cadence that works for you.</p>
+                <div className="pricing-proof"><CheckCircle2 /> Web, iOS, Android, and Google Sheets sync included</div>
               </div>
               <div className="pricing-cards">
                 <article className="price-card">
                   <p className="plan-label">Monthly</p>
                   <div className="price"><strong>$9.99</strong><span>/ month</span></div>
-                  <p>Flexible access to every core feature.</p>
+                  <p>Flexible access to the complete ReceiptSync workflow.</p>
                   <ul>
                     {["Unlimited receipt scanning", "Web, iOS and Android", "Google Sheets sync", "Reports and budgeting tools"].map((item) => <li key={item}><Check /> {item}</li>)}
                   </ul>
-                  <a className="button button-outline" href={`${SIGNUP_URL}?plan=monthly`}>Start 14-day free trial</a>
+                  <a className="button button-outline" href={`${SIGNUP_URL}?plan=monthly`}>Start 14-day trial</a>
                 </article>
                 <article className="price-card price-card-featured">
-                  <div className="founder-badge">Founding member</div>
+                  <div className="value-badge">Best value</div>
                   <p className="plan-label">Annual</p>
                   <div className="price"><strong>$39.99</strong><span>/ year</span></div>
-                  <p className="price-compare"><s>Normally $119.88</s> · lock in the best value</p>
+                  <p className="price-compare">A full year of the same complete workflow.</p>
                   <ul>
                     {["Unlimited receipt scanning", "Web, iOS and Android", "Google Sheets sync", "Reports and budgeting tools"].map((item) => <li key={item}><Check /> {item}</li>)}
                   </ul>
-                  <a className="button button-pink" href={`${SIGNUP_URL}?plan=annual`}>Claim annual offer <ArrowRight size={17} /></a>
+                  <a className="button button-pink" href={`${SIGNUP_URL}?plan=annual`}>Start annual trial <ArrowRight size={17} /></a>
                 </article>
               </div>
-              <p className="pricing-footnote">14-day free trial · No credit card required to start · Cancel anytime</p>
+              <p className="pricing-footnote">14-day free trial · No credit card required to start</p>
             </div>
           </div>
         </section>
 
         <section id="faq" className="section faq-section">
           <div className="container">
-            <FlowMarker number="07" label="Remove uncertainty" />
+            <FlowMarker number="06" label="Start with confidence" />
             <div className="faq-layout">
               <div className="faq-intro">
-                <Eyebrow>Questions before you scan?</Eyebrow>
-                <h2>Clear answers, before you commit.</h2>
-                <p>Start free and see the workflow with your own receipts.</p>
+                <Eyebrow>Questions before you sync?</Eyebrow>
+                <h2>Clear answers, before you start the trial.</h2>
+                <p>The goal is simple: let you see exactly how the workflow fits into your existing expense process.</p>
               </div>
               <Accordion type="single" collapsible className="faq-list">
+                <AccordionItem value="trial">
+                  <AccordionTrigger>What happens when I start the trial?</AccordionTrigger>
+                  <AccordionContent>Create your account, connect the Google account and Sheet you want to use, then begin scanning and reviewing receipts in your own workflow.</AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="review">
+                  <AccordionTrigger>Can I review a receipt before it syncs?</AccordionTrigger>
+                  <AccordionContent>Yes. ReceiptSync is designed so you can check the extracted details before a receipt becomes part of your organized expense record.</AccordionContent>
+                </AccordionItem>
                 <AccordionItem value="sync">
                   <AccordionTrigger>How does Google Sheets sync work?</AccordionTrigger>
-                  <AccordionContent>Connect your Google account, choose a Sheet, and ReceiptSync adds verified expense details as you scan or upload receipts.</AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="web">
-                  <AccordionTrigger>Can I upload receipts from the web?</AccordionTrigger>
-                  <AccordionContent>Yes. The web portal supports desktop uploads alongside mobile capture, so you can work from whichever device is convenient.</AccordionContent>
+                  <AccordionContent>Connect your Google account, choose a Sheet, and ReceiptSync adds organized receipt details as you scan or upload.</AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="images">
                   <AccordionTrigger>What happens to my receipt images?</AccordionTrigger>
-                  <AccordionContent>Your receipt images stay associated with your records so they remain searchable, and you can remove them when you choose.</AccordionContent>
+                  <AccordionContent>Your receipt images stay associated with their records so they remain searchable, and you can remove records when you choose.</AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="business">
-                  <AccordionTrigger>Can I use ReceiptSync for business expenses?</AccordionTrigger>
-                  <AccordionContent>Yes. ReceiptSync is designed for freelancers and small businesses that need categorized records, receipt evidence, exports, and Google Sheets.</AccordionContent>
+                <AccordionItem value="devices">
+                  <AccordionTrigger>Can I work from more than one device?</AccordionTrigger>
+                  <AccordionContent>Yes. Capture receipts from mobile and use the web portal when you want to review, upload, organize, or export from a larger screen.</AccordionContent>
                 </AccordionItem>
               </Accordion>
             </div>
           </div>
         </section>
+        </div>
 
         <section className="final-cta-section">
           <div className="container">
@@ -518,12 +459,12 @@ export default function Home() {
               <div className="final-cta-icon"><img src={cameraImage} alt="" /></div>
               <div>
                 <Eyebrow>Ready when your next receipt arrives</Eyebrow>
-                <h2>Stop typing out receipts.</h2>
-                <p>Scan your first receipt and see it organized automatically.</p>
+                <h2>Your next receipt can be your first synced row.</h2>
+                <p>Start the trial, test the workflow with your own receipt, and decide from a real result.</p>
               </div>
               <div className="final-cta-actions">
-                <a className="button button-pink button-large" href={SIGNUP_URL}>Start free on the web <ArrowRight size={18} /></a>
-                <span><Smartphone size={15} /> Available on iOS and Android</span>
+                <a className="button button-pink button-large" href={`${SIGNUP_URL}?plan=monthly`}>Start 14-day free trial <ArrowRight size={18} /></a>
+                <span><CheckCircle2 size={15} /> No credit card required</span>
               </div>
             </div>
           </div>
@@ -534,7 +475,7 @@ export default function Home() {
         <div className="container footer-grid">
           <div className="footer-brand">
             <Logo light />
-            <p>Snap. Extract. Organize. Automatically.</p>
+            <p>Receipt to spreadsheet—without the admin.</p>
             <span>© 2026 ReceiptSync</span>
           </div>
           {[

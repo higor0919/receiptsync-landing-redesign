@@ -60,3 +60,19 @@
 - [x] Validate the reordered transition on desktop and mobile
 - [x] Run TypeScript checks and the production build
 - [x] Save the reordered checkpoint
+
+## Conversion-audit framing
+
+- [x] Treat ReceiptSync as the category originator in the final audit
+- [x] Use other products only as current-market marketing benchmarks
+
+## Visual conversion redesign
+
+- [x] Define the revised conversion-first visual direction and section hierarchy
+- [x] Rework the hero around the Google Sheets outcome and one primary action
+- [x] Add an on-page receipt-to-spreadsheet proof sequence
+- [x] Align pricing and final CTA language with the trial journey
+- [x] Strengthen visible trust and security reassurance with authentic claims only
+- [x] Validate desktop and mobile conversion hierarchy
+- [x] Run TypeScript checks and the production build
+- [x] Save the visual conversion redesign checkpoint
